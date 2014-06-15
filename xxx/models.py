@@ -27,6 +27,12 @@ class Owner(models.Model):
             'pk': self.pk,
         })
 
+    def get_form_action_url(self, form, widgy):
+        return urlresolvers.reverse('owner_form', kwargs={
+            'pk': self.pk,
+            'form_node_pk': form.node.pk,
+        })
+
 
 @widgy.register
 class Widget(Content):
