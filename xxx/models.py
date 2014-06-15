@@ -1,4 +1,5 @@
 from django.db import models
+from django.core import urlresolvers
 
 import widgy
 from widgy.site import WidgySite
@@ -14,9 +15,17 @@ class Owner(models.Model):
     content = WidgyField(
         site=site,
         root_choices=(
-            'xxx.Widget',
+            'page_builder.Layout',
         ),
     )
+
+    def __unicode__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return urlresolvers.reverse('owner_detail', kwargs={
+            'pk': self.pk,
+        })
 
 
 @widgy.register

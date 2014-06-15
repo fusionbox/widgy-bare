@@ -41,6 +41,9 @@ INSTALLED_APPS = (
     'compressor',
     'argonauts',
 
+    'widgy.contrib.page_builder',
+    'filer',
+
     'xxx',
 )
 
@@ -98,3 +101,5 @@ COMPRESS_ENABLED = True
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_pyscss.compressor.DjangoScssFilter'),
 )
+
+WIDGY_SITE = 'xxx.models.site'

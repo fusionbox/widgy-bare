@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.views.generic import DetailView
 
-# Create your views here.
+from .models import Owner
+
+
+owner_detail = DetailView.as_view(model=Owner)
