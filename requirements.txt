@@ -1,0 +1,2 @@
+Django==1.6.5
+-e git+https://github.com/fusionbox/django-widgy@563c2f010ee52114747eee0f267bbaac25ff8658#egg=widgy-dev
